@@ -1,0 +1,25 @@
+<p>add-hero works!</p>
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="title">Hero</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          required
+          [(ngModel)]="hero.name"
+          name="title"
+        />
+      </div>
+      <button (click)="saveHero()" class="btn btn-success">Submit</button>
+    </div>
+    <div *ngIf="submitted">
+      <h4>Hero was submitted</h4>
+      <button (click)="newHero()">Add</button>
+      <a href="/all">goBack</a>
+    </div>
+  </div>
+</div>
+

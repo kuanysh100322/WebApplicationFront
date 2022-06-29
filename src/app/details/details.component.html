@@ -1,0 +1,25 @@
+<h1>Hero detail</h1>
+<div>
+  <div *ngIf="currentTutorial.id" class="edit-form">
+    <h3>Name :{{currentTutorial.name}}</h3>
+    <h3>Id :{{currentTutorial.id}}</h3>
+    <input
+      type="text"
+      class="form-control"
+      id="title"
+      [(ngModel)]="currentTutorial.name"
+      name="title"
+    />
+    <button
+      type="submit"
+      class="badge badge-success mb-2"
+      (click)="updateHero()"
+    >
+      Update
+    </button>
+    <button class="badge badge-danger mr-2" (click)="deleteHero()">
+      Delete
+    </button>
+  </div>
+</div>
+
